@@ -1,23 +1,75 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Button from "./components/Button";
+import Input from "./components/Input";
+import ClearButton from "./components/ClearButton";
+import { useState } from "react";
+import { evaluate } from "mathjs";
 
 function App() {
+  const [input, setInput] = useState("");
+
+  const addInput = (value) => {
+    setInput(input + value);
+  };
+
+  const calculatorResult = () => {
+    if (input) {
+      setInput(evaluate(input));
+    } else {
+      alert("Please enter value");
+    }
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className="container-calculator">
+        <Input input={input} />
+        <div className="row">
+          <Button setClic={addInput}>+</Button>
+          <Button setClic={addInput}>-</Button>
+          <Button setClic={addInput}>*</Button>
+          <Button setClic={addInput}>/</Button>
+        </div>
+        <div className="row">
+          <Button setClic={addInput}>1</Button>
+          <Button setClic={addInput}>2</Button>
+          <Button setClic={addInput}>3</Button>
+          <Button setClic={addInput}>4</Button>
+        </div>
+        <div className="row">
+          <Button setClic={addInput}>5</Button>
+          <Button setClic={addInput}>6</Button>
+          <Button setClic={addInput}>7</Button>
+          <Button setClic={addInput}>8</Button>
+        </div>
+        <div className="row">
+          <Button setClic={calculatorResult}>=</Button>
+          <Button setClic={addInput}>9</Button>
+          <Button setClic={addInput}>0</Button>
+          <Button setClic={addInput}>.</Button>
+        </div>
+        <div className="row">
+          <ClearButton setClear={() => setInput("")}> Clear </ClearButton>
+        </div>
+      </div>
+      <div className="coder-info">
+        Coded by 🇪🇨
         <a
-          className="App-link"
-          href="https://reactjs.org"
+          href="https://www.linkedin.com/in/maggi-bastidas-013734104/"
           target="_blank"
-          rel="noopener noreferrer"
+          className="link-info"
         >
-          Learn React
+          M.B.
         </a>
-      </header>
+        <br />
+        Open source on&nbsp;
+        <a
+          href=""
+          className="link-info"
+        >
+          GitHub.&nbsp;
+        </a>
+      </div>
     </div>
   );
 }
