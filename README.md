@@ -5,7 +5,7 @@
   alt="calculator" alt="Edit Building Page (screenshot)" height="300"
 </p>
   
-Here you can find the link of the site: https://MaggiMBR.github.io/calculator-app
+Here you can find the link of the site: https://maggimbr.github.io/calculator-react-app
 
 ## Geneal information
 -This project is built in VS code.
