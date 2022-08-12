@@ -61,14 +61,6 @@ function App() {
         >
           M.B.
         </a>
-        <br />
-        Open source on&nbsp;
-        <a
-          href=""
-          className="link-info"
-        >
-          GitHub.&nbsp;
-        </a>
       </div>
     </div>
   );
