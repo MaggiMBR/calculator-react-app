@@ -61,6 +61,14 @@ function App() {
         >
           M.B.
         </a>
+        <br />
+        Open source on&nbsp;
+        <a
+          href="hhttps://github.com/MaggiMBR/calculator-react-app"
+          className="link-info"
+        >
+          GitHub.&nbsp;
+        </a>
       </div>
     </div>
   );
